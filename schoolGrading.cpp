@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define elif else if
 using namespace std;
 int main(){
 
@@ -14,17 +15,17 @@ int main(){
 
     }
 
-    else if(marks>=50 && marks <=59){
+    elif(marks>=50 && marks <=59){
         cout<< "C";
 
     }
 
-    else if(marks>=45 && marks <=49){
+    elif(marks>=45 && marks <=49){
         cout<< "D";
 
     }
 
-    else if(marks>=25 && marks <=44){
+    elif(marks>=25 && marks <=44){
         cout<< "E";
 
     }
