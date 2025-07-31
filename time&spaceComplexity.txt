@@ -1,0 +1,87 @@
+Time and Space Complexity
+
+
+////////////////////////////Time Complexity:
+
+
+
+Rate at which the time taken increases w.r.t the input size
+
+Always keep these 3 Rules in mind while measure Time Complexity:-
+1) Time Complexity is always measured in case of worst scenario.
+2) Avoid Constants
+3) Avoid lower values
+
+
+TC Units:-
+1) Big Oh Notation O()  >>>>>>>> Worst Case, Upper Case Complexity
+2) Theta Notation  >>>>>>>>>>> Avearge Case Complexity
+3) Omega Notation  >>>>>>>>>>> Best Case , lower Case Complexity
+
+
+
+Let's measure:-
+
+Example 1:
+for(int i=0; i<=N; i++){
+    cout<<"Salman";
+}
+
+Time Complexity= O(N)
+
+
+Example 2:
+for(int i=0; i<=N; i++){
+    for(int j=0; j<=N; j++){
+        cout<<"Salman";
+    }
+}
+
+Time Complexity = N (i) *(j=0; j<=N; j++)
+                = N (i) *N (j)
+                = N * N
+                = O(N^2)
+
+
+
+
+Example 2:
+for(int i=0; i<=N; i++){
+    for(int j=0; j<=i; j++){
+        cout<<"Salman";
+    }
+}
+
+Time Complexity = N (i) *(j=0; j<=i; j++)
+                = N (i) *N (j)
+                = N * N+1/2   //Simple Math Formula
+                = N^2/2  + N/2  // 1/2 is Constant and can be neglect
+                = O (N^2/2) ~ O(N^2)   // Exact O(N^2/2) but approximately can be considered O(N^2)
+
+
+
+
+
+
+
+
+
+////////////////Space Complexity
+
+
+Auxiliry Space (Space to take the solve the problem )  + input Space (Space to take the store the problem)
+
+if input is int a[N] then Space Complexity= O[N]
+
+Imagine we have to Add two varibale a and b:
+
+Best Approach:
+c= a+ b
+c= Auxiliry Space and a, b are the input Space
+
+
+Bad Approach:
+b= a+b
+Why? Beacuase we should not manipulate the data itself, it's considered very bad approach especially in big projects where the data is used is many places, never do this without asking from intervieweres
+
+
