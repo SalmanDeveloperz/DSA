@@ -20,18 +20,15 @@
 
 // }
 
-
-
-
 // Question 2:
 
 // Output
 /*
-*
-**
-***
-****
-*/
+ *
+ **
+ ***
+ ****
+ */
 
 // # include <bits/stdc++.h>
 // using namespace std;
@@ -45,10 +42,6 @@
 //     }
 
 // }
-
-
-
-
 
 // Question 3:
 
@@ -73,9 +66,6 @@
 
 // }
 
-
-
-
 // Question # 4:
 /*
 Input: 4
@@ -86,49 +76,30 @@ Output:
 *
 */
 
+// #include <bits/stdc++.h>
+// using namespace std;
 
-# include <bits/stdc++.h>
-using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     for (int i = n; i >= 0; i--)
+//     {
+//         for (int j = 1; j <= i; j++)
+//         {
+//             cout << "*";
+//         }
+//         cout << endl;
+//     }
+// }
 
-int main(){
-    int n;
-    cin>> n;
-    for (int i=n; i>=0; i--){
-        for (int j=1; j<=i; j++){
-            cout<<"*";
-        }
-        cout<< endl;
-    }
-
-}
-
-
-
-
-//Question # 5;
+// Question # 5;
 
 /*
 Input: 4
 Output:
-   *  
+   *
   ***
  *****
 *******
 */
-
-
-// # include <bits/stdc++.h>
-// using namespace std;
-
-// int main(){
-//     int n;
-//     cin>> n;
-//     for (int i=0; i>=n; i++){
-//         for (int j=i; j>=n; j++){
-//             cout<< j;
-//         }
-//         cout<<endl;
-//     }
-
-//     return 0;
-// }
