@@ -139,45 +139,32 @@ void pattern6(int n)
      *
 
 */
-void pattern7(int n)
-{
-
-    for (int i = 1; i <= n; ++i)
-    {
-        // for left space
+void pattern7(int n){
+    for (int i = 1; i < n; i++){
+        // spaces
         for (int j = 0; j < i; j++)
         {
             cout << " ";
         }
 
-        //// 1ST WAY TO PRINT STARS
-
-        // // for left stars
-        // for (int j = 0; j< n-i-1; j++)
-        // {
-        //     cout << "*";
-        // }
-
-        // //for right stars
-        // for (int j = 0; j <= n-i-1; j++)
-        // {
-        //     cout << "*"; // cout << endl;
-        // }
-
-        //////2nd WAY TO PRINT STARS
-
-        for (int j = 0; j < 2 * n - (2 * i - 1); j++)
-        {
+        // stars
+        for (int j = 0; j < 2 * n - (2 * i + 1); j++){
             cout << "*";
         }
-        // // right for space
-        for (int j = 0; j < i; j++)
-        {
+
+        // spaces
+        for (int j = 0; j < i; j++){
             cout << " ";
         }
         cout << endl;
     }
 }
+
+/*
+
+
+*/
+
 
 int main()
 {
