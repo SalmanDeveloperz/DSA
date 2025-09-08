@@ -221,12 +221,61 @@ void pattern8(int n){
     }
 }
 
+/*
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+*/
+//// This is not required method, it combines two patterns but now printing the required symmetrical pattern.
+// void pattern9(int n){
+//     //first half
+//     for (int i = 0; i < n; i++){
+//         for (int j = 0; j<=i; j++){
+//             cout<<"*";
+//         }
+//         cout<<"\n";
+//     }
+
+//     //second half
+//     for (int i = 0; i < n; i++){
+//         for (int j = i; j<n; j++){
+//             cout<<"*";
+//         }
+//         cout<<"\n";
+//     }
+
+// }
+
+
+
+//// This is the correct approch for required symmetrical pattern
+void pattern9(int n){
+    for(int i=1; i<=2*n-1; i++){    // For printing 9 rows outside  2n-1= 2(5)-1= 9
+        int star=i;
+        if(i>n){
+            star=2*n-i;
+        }
+        for (int j=1; j<=star; j++){
+            cout<<"*";
+        }
+        
+        cout<<endl;
+    }
+}
 
     int main()
 {
     int n;
     cin >> n;
-    pattern8(n);
+    pattern9(n);
 
     return 0;
 }
