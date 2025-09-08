@@ -373,12 +373,41 @@ void pattern13(char n){
 }
 
 
+void pattern14(char n){
+    //🎉🎉🎉🎉🎉🎉🎉 Self made Logic Hurraaaaaahhhhhhh Bro 🎉🎉🎉🎉🎉🎉🎉🎉
+    for (char i=n; i>='A'; i--){
+        for(char j='A'; j<=i; j++){
+            cout<<j<<" ";
+            
+        }
+        cout<<endl;
+    }
+}
+
+/*
+    A 
+    B B 
+    C C C 
+    D D D D 
+    E E E E E 
+
+*/
+void pattern15(char n){
+    //🎉🎉🎉🎉🎉🎉🎉 Self made Logic Hurraaaaaahhhhhhh Bro 🎉🎉🎉🎉🎉🎉🎉🎉
+    for (char i='A'; i<=n; i++){
+        for(char j='A'; j<=i; j++){
+            cout<<i<<" ";
+            
+        }
+        cout<<endl;
+    }
+}
 
     int main()
 {
     char n;
     cin >> n;
-    pattern13(n);
+    pattern14(n);
 
     return 0;
 }
