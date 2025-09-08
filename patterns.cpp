@@ -351,11 +351,34 @@ void pattern12(int n){
         cout<<endl;
     }
 }
+
+
+/*
+
+    A 
+    A B 
+    A B C 
+    A B C D 
+    A B C D E 
+
+*/
+void pattern13(char n){
+    //🎉🎉🎉🎉🎉🎉🎉 Self made Logic Hurraaaaaahhhhhhh Bro 🎉🎉🎉🎉🎉🎉🎉🎉
+    for (char i='A'; i<=n; i++){
+        for(char j='A'; j<=i; j++){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
+
     int main()
 {
-    int n;
+    char n;
     cin >> n;
-    pattern12(n);
+    pattern13(n);
 
     return 0;
 }
