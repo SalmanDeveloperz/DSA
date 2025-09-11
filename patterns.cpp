@@ -352,7 +352,6 @@ void pattern12(int n){
     }
 }
 
-
 /*
 
     A 
@@ -372,6 +371,13 @@ void pattern13(char n){
     }
 }
 
+/*
+    A B C D E 
+    A B C D 
+    A B C 
+    A B 
+    A 
+*/
 
 void pattern14(char n){
     //🎉🎉🎉🎉🎉🎉🎉 Self made Logic Hurraaaaaahhhhhhh Bro 🎉🎉🎉🎉🎉🎉🎉🎉
@@ -392,6 +398,7 @@ void pattern14(char n){
     E E E E E 
 
 */
+
 void pattern15(char n){
     //🎉🎉🎉🎉🎉🎉🎉 Self made Logic Hurraaaaaahhhhhhh Bro 🎉🎉🎉🎉🎉🎉🎉🎉
     for (char i='A'; i<=n; i++){
@@ -403,11 +410,44 @@ void pattern15(char n){
     }
 }
 
-    int main()
-{
-    char n;
+/*
+
+     A
+    ABA
+   ABCBA
+  ABCDCBA
+ ABCDEDCBA
+
+*/
+
+void pattern16(int n){
+    //🎉🎉🎉🎉🎉🎉🎉 Self made Logic Hurraaaaaahhhhhhh Bro 🎉🎉🎉🎉🎉🎉🎉🎉
+
+    for(int i=0; i<n; i++){
+        // Printing First spaces
+        for(int j=i; j<n; j++){
+            cout<<" ";
+        }
+
+        // Printing left half numbers
+        for(char j='A'; j<='A'+i; j++){
+            cout<<j;
+        }
+
+        // Printing right half numbers
+        for (int j= i-1; j>= 0; j--) {
+            cout << char('A' +j);
+        }
+        
+        cout<<endl;
+    }
+
+}
+
+int main(){
+    int n;
     cin >> n;
-    pattern14(n);
+    pattern16(n);
 
     return 0;
 }
