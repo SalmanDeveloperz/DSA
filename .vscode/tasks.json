@@ -2,18 +2,42 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build and run",
+      "label": "compile",
       "type": "shell",
-      "command": "powershell",
+      "command": "g++",
       "args": [
-        "-Command",
-        "cd '${fileDirname}'; g++ -std=c++17 '${file}' -o ${fileBasenameNoExtension}; if ($?) { Get-Content input.txt | .\\${fileBasenameNoExtension} | Out-File -Encoding UTF8 output.txt; Write-Host 'Program executed successfully! Check output.txt' }"
+        "-std=c++17",
+        "${file}",
+        "-o",
+        "${fileBasenameNoExtension}"
       ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "./${fileBasenameNoExtension} < input.txt > output.txt"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "dependsOn": ["compile"],
+      "problemMatcher": [],
       "group": {
         "kind": "build",
         "isDefault": true
-      },
-      "problemMatcher": ["$gcc"]
+      }
     }
   ]
 }
+
