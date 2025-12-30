@@ -446,17 +446,21 @@ void pattern16(int n){
 
 void pattern (int n){
     for (int i=1; i<=n; i++){
+        int temp;
+        if(i%2==0){
+                temp=0;
+            }
+            else{
+                temp=1;
+            }
         for (int j=1; j<=i; j++){
-            cout<<"*";
+            cout<< temp;
+            temp=1-temp;
+            
         }
         cout<< endl;
     }
-    for (int i=1; i<=n; i++){
-        for (int j=i; j<n; j++){
-            cout<<"*";
-        }
-        cout<< endl;
-    }
+   
 
 }
 
