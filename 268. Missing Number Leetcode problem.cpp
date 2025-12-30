@@ -1,7 +1,7 @@
 /*
-===========================================================
 LeetCode: 268. Missing Number
------------------------------------------------------------
+
+
 Problem:
 Given an array nums containing n distinct numbers in the
 range [0, n], return the only number in the range that is
@@ -10,13 +10,13 @@ missing from the array.
 Example:
 nums = [3, 0, 1]
 Output = 2
-===========================================================
 */
 
 /*
-===========================================================
 Solution 1: Mathematical Sum Formula
------------------------------------------------------------
+
+
+
 Intuition:
 This problem can be solved using basic math.
 
@@ -48,7 +48,6 @@ Why it works:
 Complexity:
 Time Complexity: O(n)
 Space Complexity: O(1)
-===========================================================
 */
 
 class Solution_Math {
@@ -67,10 +66,13 @@ public:
     }
 };
 
+
+
+
 /*
-===========================================================
 Solution 2: XOR Bitwise Approach
------------------------------------------------------------
+
+
 Intuition:
 XOR has a very useful property:
 - a ^ a = 0
@@ -105,7 +107,8 @@ Why it works:
 Complexity:
 Time Complexity: O(n)
 Space Complexity: O(1)
-===========================================================
+
+
 */
 
 class Solution_XOR {
