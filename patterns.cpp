@@ -444,28 +444,25 @@ void pattern16(int n){
 
 }
 
-void pattern (int n){
+void pattern17 (int n){
 
-    // int count= 1;
+    int start=char('A'+n-1)
     for (int i=1; i<=n; i++){
-        for (int j=1; j<=i; j++){
-            cout<<char('A'+i-1);
+        for (int j=n; j>=i; j--){
+            cout<<char('A'+j); 
         }
+
         cout<<endl;
 
 
     }
-
-       
-
-   
 
 }
 
 int main(){
     int n;
     cin >> n;
-    pattern(n);
+    pattern17(n);
 
     return 0;
 }
