@@ -2,44 +2,44 @@
 ////// FIRST APPROACH WITH DEVISION METHOD, IGNORING ZERO ELEMENTS
 
 
-// class Solution {
-// public:
-//     vector<int> productExceptSelf(vector<int>& nums) {
-//         int size = nums.size();
-//         vector<int> newArray;
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& nums) {
+        int size = nums.size();
+        vector<int> newArray;
 
-//         int product = 1;
-//         int zeroCount = 0;
+        int product = 1;
+        int zeroCount = 0;
 
-//         // Step 1: compute product of non-zero elements + count zeros
-//         for (int i = 0; i < size; i++) {
-//             if (nums[i] == 0) {
-//                 zeroCount++;
-//                 continue;
-//             }
-//             product *= nums[i];
-//         }
+        // Step 1: compute product of non-zero elements + count zeros
+        for (int i = 0; i < size; i++) {
+            if (nums[i] == 0) {
+                zeroCount++;
+                continue;
+            }
+            product *= nums[i];
+        }
 
-//         // Step 2: build result
-//         for (int i = 0; i < size; i++) {
+        // Step 2: build result
+        for (int i = 0; i < size; i++) {
 
-//             if (zeroCount > 1) {
-//                 newArray.push_back(0);
-//             }
-//             else if (zeroCount == 1) {
-//                 if (nums[i] == 0)
-//                     newArray.push_back(product);
-//                 else
-//                     newArray.push_back(0);
-//             }
-//             else {
-//                 newArray.push_back(product / nums[i]);
-//             }
-//         }
+            if (zeroCount > 1) {
+                newArray.push_back(0);
+            }
+            else if (zeroCount == 1) {
+                if (nums[i] == 0)
+                    newArray.push_back(product);
+                else
+                    newArray.push_back(0);
+            }
+            else {
+                newArray.push_back(product / nums[i]);
+            }
+        }
 
-//         return newArray;
-//     }
-// };
+        return newArray;
+    }
+};
 
 
 
@@ -48,7 +48,7 @@
 
 
 ////// OPTIMAL APPROACH WITH PREFIX/ SUFFIX METHOD
-
+//Time complexity of this solution is O(n) and space complexity also O(n)
 
 class Solution {
 public:
@@ -90,5 +90,37 @@ public:
 
         return result;
 
+    }
+};
+
+
+
+
+
+
+
+/// The best optimal appraoch with O(n) time complexity and O(1) space complexity
+// Wihtout any additional loop and with constant space 
+
+
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& nums) {
+        int n= nums.size();
+        vector<int> result(n);
+
+        // for the left side
+        result[0]= 1;
+        for (int i=1; i<n; i++){
+            result[i]= result[i-1]* nums[i-1];
+        }
+
+        // for the right side
+        int right= 1;
+        for (int i=n-1; i>=0; i--){
+            result[i]= result[i]* right;
+            right= right* nums[i];
+        }
+        return result;
     }
 };
