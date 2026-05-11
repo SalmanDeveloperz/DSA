@@ -1,34 +1,34 @@
 class Solution
 {
 public:
-    int maxArea(vector<int> &heights)
+    int maxArea(vector<int> &height)
     {
-        int n = heights.size();
+        int n = height.size();
         int i = 0;
         int j = n - 1;
-        int maxHeight = 0;
+        int maxWater = 0;
 
         while (i < j)
         {
-            // finding width    :: Width= j-1   (Means from the last to the current)
+
+            // Width (j-i)
             int w = j - i;
-
-            // finding height   :: height= min (height[i], height[j])
-            int h = min(heights[i], heights[j]);
-
-            // finding area     :: Area= Width* Height
+            // Height
+            int h = min(height[i], height[j]);
+            // Area
             int area = w * h;
-
-            // finding maximum height
-            maxHeight = max(maxHeight, area);
-
-            if (heights[i] > heights[j])
+            // maxWater
+            maxWater = max(maxWater, area);
+            // Increase or decrease
+            if (height[i] > height[j])
             {
                 j--;
             }
             else
+            {
                 i++;
+            }
         }
-        return maxHeight;
+        return maxWater;
     }
 };
